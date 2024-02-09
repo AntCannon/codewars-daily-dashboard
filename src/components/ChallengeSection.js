@@ -3,12 +3,23 @@ import React from 'react';
 import axios from 'axios';
 
 //api variables
-const userName =  'AntCannon'
+const userName =  'AntCannon';
 const page = 0;
-const getCompletedChallengesURL = `http://www.codewars.com/api/v1/users/${userName}/code-challenges/completed?page=${page}`
+const getCompletedChallengesURL = `https://www.codewars.com/api/v1/users/AntCannon/code-challenges/completed?page=0}`
+
+// Challenge Card
+// const ChallengeCard = (props) => {
+//   return(
+//     <>
+//     <h2></h2>
+//     </>
+//   )
+// }
+
+
 
 // ChallengeSection.js
-const ChallengeSection = ({ challenge }) => {
+const ChallengeSection = () => {
   const [challengeData, setChallengeData] = React.useState(null);
   const [error, setError] = React.useState(null);
   
