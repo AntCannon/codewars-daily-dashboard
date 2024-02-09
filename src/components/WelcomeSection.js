@@ -1,6 +1,8 @@
 // imports
 import React from "react";
 import axios from "axios";
+import './Welcome.css';
+
 
 // api variables
 const userName = 'AntCannon';
@@ -23,12 +25,12 @@ const WelcomeSection = () => {
   if (error) return `Error: ${error.message}`
   if (!userData) return null;
 
-  return(
-    <>
-    <h1>This is the Welcome Section</h1>
-    <h1>{userData.username}</h1>
-    <h2>Rank: {userData.ranks.overall.name} | Honor: {userData.honor}</h2>
-    </>
+  return (
+    <div className="Welcome">
+      <h1>This is the Welcome Section</h1>
+      <h1>{userData.username}</h1>
+      <h2>Rank: {userData.ranks.overall.name} | Honor: {userData.honor}</h2>
+    </div>
   )
 };
 

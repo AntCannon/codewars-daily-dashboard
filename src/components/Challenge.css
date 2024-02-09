@@ -1,0 +1,9 @@
+.Challenge {
+  margin-left: 0;
+}
+
+.Container {
+  width: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
