@@ -18,5 +18,3 @@ npx create-react-app <folder-name>
 - Initializes git
 - Makes initial commit
 
-
-  
