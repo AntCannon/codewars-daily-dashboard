@@ -13,9 +13,8 @@ const App = () => {
     <div>
       <WelcomeSection />
       {/* <p>{ apiResponse.id }</p> */}
-      {/* <ApiData /> */}
       <div>
-        {/* <ChallengeCard /> */}
+        <ChallengeCard />
       </div>
     </div>
   );
