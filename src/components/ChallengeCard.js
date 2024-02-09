@@ -5,6 +5,7 @@ const ChallengeCard = ({ challenge }) => {
 
   return (
     <>
+    <h1>This is the Solved Challenge Section</h1>
     </>
   );
 }
