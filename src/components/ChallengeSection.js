@@ -7,8 +7,8 @@ const userName =  'AntCannon'
 const page = 0;
 const getCompletedChallengesURL = `http://www.codewars.com/api/v1/users/${userName}/code-challenges/completed?page=${page}`
 
-// ChallengeCard.js
-const ChallengeCard = ({ challenge }) => {
+// ChallengeSection.js
+const ChallengeSection = ({ challenge }) => {
   const [challengeData, setChallengeData] = React.useState(null);
   const [error, setError] = React.useState(null);
   
@@ -31,4 +31,4 @@ const ChallengeCard = ({ challenge }) => {
   );
 };
 
-export default ChallengeCard;
+export default ChallengeSection;

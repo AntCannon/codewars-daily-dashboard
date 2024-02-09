@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import WelcomeSection from './components/WelcomeSection';
-import ChallengeCard from './components/ChallengeCard';
+import ChallengeSection from './components/ChallengeSection';
 import ApiData from './components/ApiData';
 import FCCTutorial from './FCCTutorial';
 
@@ -14,7 +14,7 @@ const App = () => {
       <WelcomeSection />
       {/* <p>{ apiResponse.id }</p> */}
       <div>
-        <ChallengeCard />
+        <ChallengeSection />
       </div>
     </div>
   );
