@@ -37,13 +37,15 @@ const ChallengeSection = () => {
   
   // create array of challenge cards
   const currDate = new Date().getDate();
-  let numChallengesCompleted = 0;
   const challengesArr = [];
+  
   for (let i = 0; currDate === new Date(challengeData[i].completedAt).getDate(); i++) {
     challengesArr.push(<ChallengeCard name={challengeData[i].name} date={dispDate(challengeData[i])}/>);
-    numChallengesCompleted = i;
   }
 
+  let numChallengesCompleted = challengesArr.length
+
+  // Return
   return (
     <div>
       <h1>I have completed {numChallengesCompleted} Katas today!</h1>
