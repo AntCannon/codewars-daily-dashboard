@@ -13,9 +13,6 @@ const WelcomeSection = () => {
   const [error, setError] = React.useState(null);
 
   React.useEffect(() => {
-    // Update the API URL
-    const apiUrl = 'http://www.codewars.com/api/v1/users/AntCannon/code-challenges/completed?page=0';
-
     // Make API request to Codewars
     axios.get(getUserURL)
       .then(response => setUserData(response.data))
