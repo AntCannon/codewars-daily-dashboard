@@ -1,3 +1,9 @@
 .Welcome {
   text-align: center;
 }
+
+.HR {
+  height: 2px;
+  width: auto;
+  background: #000;
+}

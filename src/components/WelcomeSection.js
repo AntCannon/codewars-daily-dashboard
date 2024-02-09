@@ -29,6 +29,7 @@ const WelcomeSection = () => {
     <div className="Welcome">
       <h1>Hi 👋🏾, my name is {userData.username} and I am a Code Warrior!</h1>
       <h2>My rank is {userData.ranks.overall.name} and have earned {userData.honor} honor.</h2>
+      <div className="HR"></div>
     </div>
   )
 };

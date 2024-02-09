@@ -53,6 +53,7 @@ const ChallengeSection = () => {
     <div className="Challenge ">
       <h1 className="NumKata">I train every day</h1>
       <h1 className="NumKata">I've completed {numChallengesCompleted} Katas today.</h1>
+      <p><strong>Click a card and go train!</strong></p>
       <div className="Container">
         {challengesArr}
       </div>
@@ -64,5 +65,10 @@ const ChallengeSection = () => {
 function dispDate(challenge) {
   return new Date(challenge.completedAt).toString().slice(0,-33)
 }
+
+// Helper function - kata link
+// function kataLink(challenge) {
+//   return()
+// }
 
 export default ChallengeSection;
