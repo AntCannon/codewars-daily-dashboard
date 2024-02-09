@@ -19,9 +19,11 @@ const ChallengeCard = (props) => {
 
 // ChallengeSection.js
 const ChallengeSection = () => {
+  // create useStates
   const [challengeData, setChallengeData] = React.useState(null);
   const [error, setError] = React.useState(null);
   
+  // useEffect for API
   React.useEffect(() => {
     // Make API request to codewars
     axios.get(getCompletedChallengesURL)
@@ -34,15 +36,16 @@ const ChallengeSection = () => {
   if (!challengeData) return null;
   
   // create array of challenge cards
+  const currDate = new Date().getDate();
+
   const challengesArr = [];
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; currDate === new Date(challengeData[i].completedAt).getDate(); i++) {
     challengesArr.push(<ChallengeCard name={challengeData[i].name} date={dispDate(challengeData[i])}/>)
   }
 
   return (
     <div>
       <h1>Daily Challenges should be Here</h1>
-      {/* <ChallengeCard name={challengeData[0].name} date={dispDate(challengeData[0])}/> */}
       <div>{challengesArr}</div>
     </div>
   );
