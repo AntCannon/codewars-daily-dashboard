@@ -25,20 +25,25 @@ const ChallengeSection = () => {
   React.useEffect(() => {
     // Make API request to codewars
     axios.get(getCompletedChallengesURL)
-      .then(response => setChallengeData(response.data.data))
-      .catch(error => setError(error))
-
+    .then(response => setChallengeData(response.data.data))
+    .catch(error => setError(error))
+    
   }, []);
-
+  
   if (error) return `Error: ${error.message}`
   if (!challengeData) return null;
+  
+  // create array of challenge cards
+  const challengesArr = [];
+  for (let i = 0; i < 5; i++) {
+    challengesArr.push(<ChallengeCard name={challengeData[i].name} date={dispDate(challengeData[i])}/>)
+  }
 
   return (
     <div>
       <h1>Daily Challenges should be Here</h1>
-      <ChallengeCard name={challengeData[0].name} date={dispDate(challengeData[0])}/>
-      <h3></h3>
-      {/* <h2>{challengeData[0].name}</h2> */}
+      {/* <ChallengeCard name={challengeData[0].name} date={dispDate(challengeData[0])}/> */}
+      <div>{challengesArr}</div>
     </div>
   );
 };
