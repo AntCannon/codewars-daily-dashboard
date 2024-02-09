@@ -66,8 +66,7 @@ const ChallengeSection = () => {
   // Return
   return (
     <div className="Challenge ">
-      <h1 className="NumKata">I train every day</h1>
-      <h1 className="NumKata">I've completed {numChallengesCompleted} Katas today.</h1>
+      <h1 className="NumKata">I've completed {numChallengesCompleted} katas today</h1>
       <p><strong>Click a card and go train!</strong></p>
       <div className="Container">
         {challengesArr}
