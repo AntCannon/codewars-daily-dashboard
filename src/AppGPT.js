@@ -7,7 +7,7 @@ import ApiData from './components/ApiData';
 
 const App = () => {
   const [apiResponse, setApiResponse] = useState([]);
-  
+
   useEffect(() => {
     // Update the API URL
     const apiUrl = 'http://www.codewars.com/api/v1/users/AntCannon/code-challenges/completed?page=0';
@@ -28,10 +28,11 @@ const App = () => {
   return (
     <div>
       <WelcomeSection />
-      <p>{ apiResponse.id }</p>
-      <ApiData />
+      <ApiData apiResponse={apiResponse} />
       <div>
-        <ChallengeCard />
+        {apiResponse.data.map(challenge => (
+          <ChallengeCard key={challenge.id} challenge={challenge} />
+        ))}
       </div>
     </div>
   );
