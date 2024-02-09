@@ -11,7 +11,7 @@ const getCompletedChallengesURL = `https://www.codewars.com/api/v1/users/AntCann
 const ChallengeCard = (props) => {
   return(
     <>
-    <h2>Kata: {props.name}</h2>
+    <h2 >Kata: {props.name}</h2>
     <h3>Date: {props.date}</h3>
     </>
   )
@@ -37,15 +37,16 @@ const ChallengeSection = () => {
   
   // create array of challenge cards
   const currDate = new Date().getDate();
-
+  let numChallengesCompleted = 0;
   const challengesArr = [];
   for (let i = 0; currDate === new Date(challengeData[i].completedAt).getDate(); i++) {
-    challengesArr.push(<ChallengeCard name={challengeData[i].name} date={dispDate(challengeData[i])}/>)
+    challengesArr.push(<ChallengeCard name={challengeData[i].name} date={dispDate(challengeData[i])}/>);
+    numChallengesCompleted = i;
   }
 
   return (
     <div>
-      <h1>Daily Challenges should be Here</h1>
+      <h1>I have completed {numChallengesCompleted} Katas today!</h1>
       <div>{challengesArr}</div>
     </div>
   );
