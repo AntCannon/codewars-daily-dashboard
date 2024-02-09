@@ -1,8 +1,24 @@
 .Card {
 
   width: auto;
-  padding-left: 30px ;
-  margin: 10px;
-  border: 3px solid black;
   background: rgb(183, 183, 183);
+  margin: 10px;
+  padding-left: 30px ;
+  border: 3px solid black;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.Card:hover {
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);;
+}
+
+.Info {
+  width: 75%;
+  text-align: left;
+}
+
+.Icon {
+  margin-left: 20px;
 }

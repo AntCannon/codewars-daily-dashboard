@@ -3,6 +3,7 @@ import React from 'react';
 import axios from 'axios';
 import './Cards.css';
 import './Challenge.css';
+import logo from './comp-imgs/cw-icon-ss.png'
 
 //api variables
 const userName =  'AntCannon';
@@ -13,8 +14,13 @@ const getCompletedChallengesURL = `https://www.codewars.com/api/v1/users/AntCann
 const ChallengeCard = (props) => {
   return(
     <div className="Card">
-      <h2>Kata: {props.name}</h2>
-      <h3>Date: {props.date}</h3>
+      <div className="Info">
+        <h2>Kata: {props.name}</h2>
+        <h3>Date: {props.date}</h3>
+      </div>
+      <div className="Icon">
+        <img src={logo} width={75}></img>
+      </div>
     </div>
   )
 }
