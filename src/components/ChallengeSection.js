@@ -18,6 +18,7 @@ const ChallengeCard = (props) => {
     </div>
   )
 }
+// const kataURL = `https://www.codewars.com/kata/${kataId}`
 
 // ChallengeSection.js
 const ChallengeSection = () => {
@@ -50,7 +51,8 @@ const ChallengeSection = () => {
   // Return
   return (
     <div className="Challenge ">
-      <h1 className="NumKata">I have completed {numChallengesCompleted} Katas today!</h1>
+      <h1 className="NumKata">I train every day</h1>
+      <h1 className="NumKata">I've completed {numChallengesCompleted} Katas today.</h1>
       <div className="Container">
         {challengesArr}
       </div>
