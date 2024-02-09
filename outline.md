@@ -1,10 +1,20 @@
 # Steps to build codewars.com dashboard #
-## Set up React App
+## Set up React App & Axios
+Create React App
 
+bash
 ```
 npx create-react-app codewars-dashboard
 cd codewars-dashboard
 ```
+
+Install Axios if you haven't already:  
+
+bash
+```
+npm install axios
+```
+
 
 ## Step 2: Create Components
 1. Create components for the webpage:
@@ -17,7 +27,6 @@ cd codewars-dashboard
 
       bash
       ```
-      Copy code
       npm install axios
       ```
 
