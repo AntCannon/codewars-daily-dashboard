@@ -4,6 +4,12 @@ import axios from 'axios';
 import './Cards.css';
 import './Challenge.css';
 import logo from './comp-imgs/cw-icon-ss.png'
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-router-dom"
 
 //api variables
 const userName =  'AntCannon';
@@ -14,6 +20,7 @@ const getCompletedChallengesURL = `https://www.codewars.com/api/v1/users/AntCann
 const ChallengeCard = (props) => {
   return(
     <div className="Card">
+    <a className="Card-Link" href={props.link} target="_blank" rel="noreferrer"></a>
       <div className="Info">
         <h2>Kata: {props.name}</h2>
         <h3>Date: {props.date}</h3>
@@ -24,7 +31,6 @@ const ChallengeCard = (props) => {
     </div>
   )
 }
-// const kataURL = `https://www.codewars.com/kata/${kataId}`
 
 // ChallengeSection.js
 const ChallengeSection = () => {
@@ -49,7 +55,10 @@ const ChallengeSection = () => {
   const challengesArr = [];
   
   for (let i = 0; currDate === new Date(challengeData[i].completedAt).getDate(); i++) {
-    challengesArr.push(<ChallengeCard name={challengeData[i].name} date={dispDate(challengeData[i])}/>);
+    challengesArr.push(<ChallengeCard
+      name={challengeData[i].name}
+      date={dispDate(challengeData[i])}
+      link={kataLink(challengeData[i])} />);
   }
 
   let numChallengesCompleted = challengesArr.length
@@ -73,8 +82,8 @@ function dispDate(challenge) {
 }
 
 // Helper function - kata link
-// function kataLink(challenge) {
-//   return()
-// }
+function kataLink(challenge) {
+return `https://www.codewars.com/kata/${challenge.id}`
+}
 
 export default ChallengeSection;

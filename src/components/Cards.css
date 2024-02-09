@@ -1,5 +1,4 @@
 .Card {
-
   width: auto;
   background: rgb(183, 183, 183);
   margin: 10px;
@@ -8,10 +7,19 @@
   border-radius: 10px;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .Card:hover {
-  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+}
+
+.Card-Link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .Info {
