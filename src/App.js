@@ -1,5 +1,5 @@
 // imports 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import WelcomeSection from './components/WelcomeSection';
 import ChallengeSection from './components/ChallengeSection';
 import './App.css';
