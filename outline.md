@@ -75,9 +75,11 @@ npm install axios
       bash
       ```
       npm install gh-pages --save-dev
-      Add the following scripts to your package.json:
+      ```
+    
+    - Add the following scripts to your package.json:  
       json
-      Copy code
+      ```
       "scripts": {
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build",
@@ -85,7 +87,7 @@ npm install axios
       }
       ```
 
-    - Deploy the app to GitHub Pages:
+    - Deploy the app to GitHub Pages:  
       bash
       ```
       npm run deploy
