@@ -41,4 +41,5 @@
   "devDependencies": {
     "gh-pages": "^6.1.1"
   }
+  "homepage": "https://antcannon.github.io/codewars-daily-dashboard/"
 }
