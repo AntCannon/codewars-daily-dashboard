@@ -71,7 +71,7 @@ npm install axios
 
 ## Step 6: Set Up GitHub Pages
 1. Deploy the React app to GitHub Pages:
-    - Install gh-pages package:
+    - Install gh-pages package:  
       bash
       ```
       npm install gh-pages --save-dev
