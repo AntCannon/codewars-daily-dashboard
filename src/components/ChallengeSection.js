@@ -52,9 +52,10 @@ const ChallengeSection = () => {
   
   // create array of challenge cards
   const currDate = new Date().getDate();
+  const currMonth = new Date().getMonth();
   const challengesArr = [];
   
-  for (let i = 0; currDate === new Date(challengeData[i].completedAt).getDate(); i++) {
+  for (let i = 0; (currDate === new Date(challengeData[i].completedAt).getDate() && currMonth === new Date(challengeData[i].completedAt).getMonth()); i++) {
     challengesArr.push(<ChallengeCard
       name={challengeData[i].name}
       date={dispDate(challengeData[i])}
