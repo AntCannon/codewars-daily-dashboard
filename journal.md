@@ -2,7 +2,7 @@
 
 ## Friday February 9th, 2024
 - Initial idea to create website that shows the codewars challenges I complete that day.
-- Enter chatGPT prompt to get outline.
+- Enter chatGPT prompt to get outline of steps to take.
   - [chpatGPT chat](https://chat.openai.com/share/743eb459-ba8f-4e86-af68-f519fdea6b3c)
 - Create react app.
   - Change react generated README.md to REACT-README.md
@@ -30,18 +30,15 @@ npm install axios
 ### Project Structure
 - Create Header.js and ChallengeCard.js components
   #### Notes
-  - It is good practice to create components as different files in a folder 'src/components/<component.js...>
-  - Export the component at last line  
-    javascript
-    ```
-    export default <ComponentName>;
-    ```
+  - It is good practice to create components as different files in a folder 'src/components/<ComponentName.js...>
 
-### Import requirement into App.js
+### Importing requirements
 - Run imports at top of file
   - React
   - Axios
   - Components
+  - CSS
+  - Images
   #### Notes
   - React and States  
     javascript
@@ -56,7 +53,62 @@ npm install axios
   - Components  
     javascript
     ```
-    import <ComponentName> from '<relative_path>/<Component_fileName>';
+    import <ComponentName> from '<Component_relative_path>/<Component_fileName>';
+    ```
+  - CSS  
+    javascript
+    ```
+    import '<CSS_relative_path>'
+    ```
+  - Images  
+    javascript
+    ```
+    import {<imageName>} from '<image_relative_path>'
     ```
 
+### Components
+- Create WelcomeSection.js and ChallengeSection.js
+
+  #### Notes
+  - Files implementing react must import React at the top  
+  javascript - ComponentName.js
+    ```
+    import React from 'react';
+    ```
+  - Create the component  
+  javascript - ComponentName.js
+    ```
+    const <ComponentName> = ( props? ) => {
+      return (
+        <>JSX code here</> {/* fragment enclosure OR*/}
+        <div>JSX code here</div> {/* parent element*/}
+      )
+    }
+    ```
+  - Export the component at last line  
+    javascript - ComponentName.js
+    ```
+    export default <ComponentName>;
+    ```
+  - Import component to other component or App.js  
+    javascript - Component.js OR App.js
+    ```
+    import <ComponentName> from './Component/<ComponentName.js>
+    ```
+  - Render component in other component or App.js  
+    javascript - Component.js OR App.js
+    ```
+    const App = () => {
+      return (
+        <div>
+          <ComponentName /> {/* This line renders the component*/}
+        </div>
+      )
+    }
+    ```
+  - Full example of importing component into App.js file  
+    javascript - App.js
+    ```
+    import S
+#### .js files
 ## MVP complete
