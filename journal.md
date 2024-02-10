@@ -1,9 +1,12 @@
 # Project Journal
 
 ## Friday February 9th, 2024
+### Initial Idea
 - Initial idea to create website that shows the codewars challenges I complete that day.
 - Enter chatGPT prompt to get outline of steps to take.
   - [chatGPT chat](https://chat.openai.com/share/743eb459-ba8f-4e86-af68-f519fdea6b3c)
+
+### Create reat app
 - Create react app.
   - Change react generated README.md to REACT-README.md
   - Add readme.md, outline.md, journal.md
@@ -66,7 +69,7 @@ npm install axios
     import {<imageName>} from '<image_relative_path>'
     ```
 
-### Components
+### Components and .js Files
 - Create WelcomeSection.js and ChallengeSection.js
 
   #### Notes
@@ -126,5 +129,26 @@ npm install axios
     export default App.js
     ```
 
-#### .js files
+### CSS and .css Files
+- Create WelcomeSection.css and ChallengeSection.css
+- Revise App.css rules
+  #### Notes
+  - If using separate css files it is good practice to name them after your components.
+  - Look up importing css file as module.
+  - import css file  
+    javascript
+    ```
+    import '<CSS_relative_path>'
+    ```
+  - CSS files is comprised of CSS rules  
+    css - Syntax.css
+    ```
+    selector1, selector2 {
+      property1: value;
+      property2: value;
+    }
+    ```
+
+
+
 ## MVP complete
