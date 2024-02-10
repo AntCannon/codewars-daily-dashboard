@@ -4,6 +4,6 @@
 
 .HR {
   height: 2px;
-  width: auto;
+  width: 100%;
   background: #000;
 }

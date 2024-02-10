@@ -1,10 +1,7 @@
 // imports 
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import WelcomeSection from './components/WelcomeSection';
 import ChallengeSection from './components/ChallengeSection';
-import ApiData from './components/ApiData';
-import FCCTutorial from './FCCTutorial';
 import './App.css';
 
 
