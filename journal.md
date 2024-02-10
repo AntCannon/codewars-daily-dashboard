@@ -3,7 +3,7 @@
 ## Friday February 9th, 2024
 - Initial idea to create website that shows the codewars challenges I complete that day.
 - Enter chatGPT prompt to get outline of steps to take.
-  - [chpatGPT chat](https://chat.openai.com/share/743eb459-ba8f-4e86-af68-f519fdea6b3c)
+  - [chatGPT chat](https://chat.openai.com/share/743eb459-ba8f-4e86-af68-f519fdea6b3c)
 - Create react app.
   - Change react generated README.md to REACT-README.md
   - Add readme.md, outline.md, journal.md
@@ -109,6 +109,22 @@ npm install axios
   - Full example of importing component into App.js file  
     javascript - App.js
     ```
-    import S
+    // import
+    import ComponentName from './components/ComponentName.js'
+
+    // App.js component
+    const App.js = () => {
+
+      return (
+        <div>
+          <ComponentName /> {/* renders component with name*/}
+        </div>
+      )
+    }
+
+    // export App.js
+    export default App.js
+    ```
+
 #### .js files
 ## MVP complete
