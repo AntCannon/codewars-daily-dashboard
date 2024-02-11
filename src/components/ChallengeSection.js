@@ -22,8 +22,8 @@ const ChallengeCard = (props) => {
     <div className="Card">
     <a className="Card-Link" href={props.link} target="_blank" rel="noreferrer"></a>
       <div className="Info">
-        <h2>Kata: {props.name}</h2>
-        <h3>Date: {props.date}</h3>
+        <h2>{props.name}</h2>
+        <h3>{props.date}</h3>
       </div>
       <div className="Icon">
         <img src={logo} width={75}></img>
@@ -78,7 +78,7 @@ const ChallengeSection = () => {
 
 // Helper function - display date and time
 function dispDate(challenge) {
-  return new Date(challenge.completedAt).toString().slice(0,-33)
+  return new Date(challenge.completedAt).toDateString()
 }
 
 // Helper function - kata link
