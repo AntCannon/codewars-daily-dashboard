@@ -6,12 +6,11 @@
 - Enter chatGPT prompt to get outline of steps to take.
   - [chatGPT chat](https://chat.openai.com/share/743eb459-ba8f-4e86-af68-f519fdea6b3c)
 
-### Create reat app
+### Create React App
 - Create react app.
   - Change react generated README.md to REACT-README.md
   - Add readme.md, outline.md, journal.md
   - Format chatGPT chat to outline.md
-
     #### Notes
     ### Creating React App
     bash
@@ -43,43 +42,42 @@ npm install axios
   - CSS
   - Images
   #### Notes
-  - Import React and States to .js file
-    javascript - App.js / Component.js
+  - Import React and States to .js file  
+    ```javascript``` - App.js / Component.js
     ```
     import React, { useEffect, useState } from 'react';
     ```
   - Import Axios  
-    javascript - App.js / Component.js
+    ```javascript``` - App.js / Component.js
     ```
     import axios from 'axios';
     ```
   - Import Components  
-    javascript - App.js / Component.js
+    ```javascript``` - App.js / Component.js
     ```
     import <ComponentName> from '<Component_relative_path>/<Component_fileName>';
     ```
   - Import Stylesheet  
-    javascript - App.js / Component.js
+    ```javascript``` - App.js / Component.js
     ```
     import '<CSS_relative_path>'
     ```
   - Import Images  
-    javascript - App.js / Component.js
+    ``````javascript`````` - App.js / Component.js
     ```
     import {<imageName>} from '<image_relative_path>'
     ```
 
 ### Components and .js Files
 - Create WelcomeSection.js and ChallengeSection.js
-
   #### Notes
   - Files implementing react must import React at the top  
-  javascript - ComponentName.js
+  ```javascript``` - ComponentName.js
     ```
     import React from 'react';
     ```
   - Create the component  
-  javascript - ComponentName.js
+  ```javascript``` - ComponentName.js
     ```
     const <ComponentName> = ( props? ) => {
       return (
@@ -89,17 +87,17 @@ npm install axios
     }
     ```
   - Export the component at last line  
-    javascript - ComponentName.js
+    ```javascript``` - ComponentName.js
     ```
     export default <ComponentName>;
     ```
   - Import component to other component or App.js  
-    javascript - Component.js OR App.js
+    ```javascript``` - Component.js OR App.js
     ```
     import <ComponentName> from './Component/<ComponentName.js>
     ```
   - Render component in other component or App.js  
-    javascript - Component.js OR App.js
+    ```javascript``` - Component.js OR App.js
     ```
     const App = () => {
       return (
@@ -110,7 +108,7 @@ npm install axios
     }
     ```
   - Full example of importing component into App.js file  
-    javascript - App.js
+    ```javascript``` - App.js
     ```
     // import
     import ComponentName from './components/ComponentName.js'
@@ -136,7 +134,7 @@ npm install axios
   - If using separate css files it is good practice to name them after your components.
   - Look up importing css file as module.
   - import css file  
-    javascript
+    ```javascript```
     ```
     import '<CSS_relative_path>'
     ```
@@ -149,7 +147,7 @@ npm install axios
     } // end css rule
     ```
   - Linking tags in your components to rules in css requires the tag's className attribute to match the selector in the css rule.  
-    javascript - App.js
+    ```javascript``` - App.js
     ```
     <tag className="ClassNameExample"></tag> 
     ```
@@ -163,12 +161,70 @@ npm install axios
 ### Fetch requests with axios
 - Import axios into component files
 - Test api fetches following tutorials
-- Implement successful fetches in component files.
+- Implement successful fetches in component files
+- To store data you need to use State which is covered after this section
   #### Notes
-    -Importing axios library  
-    javascript - Component.js
+  Using APIs requires basic understanding of ```promises``` along with ```async / await```
+  - Importing axios library  
+    ```javascript``` - Component.js
     ```
     import axios from 'axios';
     ```
+  - Axios fetch syntax used here  
+  ```javascript``` - App.js / Component.js
+    ```
+    axios.get(cURL) // invoke get method
+      
+      // after promise is resolved, set Variable variable to the returned object response.
+      //Use path to key / index into data as necessary. 
+      .then(response => setVariable(response.path))
+      
+      // if promise is rejected set Error variable to the returned error.
+      .catch(error => setError(error)) 
+    ```
 
+### Basic Hooks in React
+Hooks let you use different React features from your components.
+- Import useState and useEffect to components
+- Create useState and useEffect
+  #### Notes
+  States can be imported at the beginning of the file or can be called when being used. I used useState and useEffect here
+  - Importing states  
+  ```javascript``` - App.js / Component.js
+    ```
+    import { useState, useEffect } from 'react'
+    
+    const App.js = () => {
+      const [userData, setUserData] = useState(null);
+
+      return(
+        <div>
+        </div>
+      )
+    }
+    ```
+  - At use  
+  ```javascript``` - App.js / Component.js
+    ```
+    // notice React before the useState call
+    const [userData, setUserData] = React.useState(null);
+    ```
+
+### useState
+State lets a component “remember” information like user input. The state is a built-in React object that is used to contain data or information about the component. A component's state can change over time; whenever it changes, the component re-renders.
+- Syntax
+  ```javascript``` - App.js / Component.js
+    ```
+    const [state, setState] = React.useState(initialValue);
+    ```
+  - useState
+    - Deconstruct to initialize
+    - Must have initial value
+  - state
+    - Can be referenced like any other variable
+    - React does not like when variables are assigned
+  - setState
+    - Used to assign values to state
+
+### Storing Fetched Data with State
 ## MVP complete
