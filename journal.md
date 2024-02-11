@@ -43,28 +43,28 @@ npm install axios
   - CSS
   - Images
   #### Notes
-  - React and States  
-    javascript
+  - Import React and States to .js file
+    javascript - App.js / Component.js
     ```
     import React, { useEffect, useState } from 'react';
     ```
-  - Axios  
-    javascript
+  - Import Axios  
+    javascript - App.js / Component.js
     ```
     import axios from 'axios';
     ```
-  - Components  
-    javascript
+  - Import Components  
+    javascript - App.js / Component.js
     ```
     import <ComponentName> from '<Component_relative_path>/<Component_fileName>';
     ```
-  - CSS  
-    javascript
+  - Import Stylesheet  
+    javascript - App.js / Component.js
     ```
     import '<CSS_relative_path>'
     ```
-  - Images  
-    javascript
+  - Import Images  
+    javascript - App.js / Component.js
     ```
     import {<imageName>} from '<image_relative_path>'
     ```
@@ -160,5 +160,15 @@ npm install axios
     }
     ```
 
+### Fetch requests with axios
+- Import axios into component files
+- Test api fetches following tutorials
+- Implement successful fetches in component files.
+  #### Notes
+    -Importing axios library  
+    javascript - Component.js
+    ```
+    import axios from 'axios';
+    ```
 
 ## MVP complete
