@@ -70,6 +70,7 @@ npm install axios
 
 ### Components and .js Files
 - Create WelcomeSection.js and ChallengeSection.js
+- Render them in App.js component
   #### Notes
   - Files implementing react must import React at the top  
   ```javascript``` - ComponentName.js
@@ -184,11 +185,8 @@ npm install axios
     ```
 
 ### Basic Hooks in React
-Hooks let you use different React features from your components.
-- Import useState and useEffect to components
-- Create useState and useEffect
   #### Notes
-  States can be imported at the beginning of the file or can be called when being used. I used useState and useEffect here
+  Hooks let you use different React features from your components.
   - Importing states  
   ```javascript``` - App.js / Component.js
     ```
@@ -211,20 +209,38 @@ Hooks let you use different React features from your components.
     ```
 
 ### useState
-State lets a component “remember” information like user input. The state is a built-in React object that is used to contain data or information about the component. A component's state can change over time; whenever it changes, the component re-renders.
-- Syntax
-  ```javascript``` - App.js / Component.js
-    ```
-    const [state, setState] = React.useState(initialValue);
-    ```
-  - useState
-    - Deconstruct to initialize
-    - Must have initial value
-  - state
-    - Can be referenced like any other variable
-    - React does not like when variables are assigned
-  - setState
-    - Used to assign values to state
+- Create useState
+  #### Notes
+  States can be imported at the beginning of the file or can be called when being used. I used useState and useEffect here
+
+  State lets a component “remember” information like user input. The state is a built-in React object that is used to contain data or information about the component. A component's state can change over time; whenever it changes, the component re-renders.
+  - Syntax
+    ```javascript``` - App.js / Component.js
+      ```
+      const [state, setState] = React.useState(initialValue);
+      ```
+    - useState
+      - Deconstruct to initialize
+      - Must have initial value
+    - state
+      - Can be referenced like any other variable
+      - React does not like when variables are assigned
+    - setState
+      - Used to assign values to state
 
 ### Storing Fetched Data with State
+- 
+### useEffect
+- Set up axios request in useEffect
+- Use useState to save response data
+  #### Notes
+  - Syntax  
+  ```javascript``` - App.js / Component.js
+
+### Cards
+- Create Card component in ChallengeSection.js
+- Use props
+- Use loop to iterate through array and push target katas
+
+
 ## MVP complete
