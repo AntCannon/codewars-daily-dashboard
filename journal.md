@@ -140,15 +140,25 @@ npm install axios
     ```
     import '<CSS_relative_path>'
     ```
-  - CSS files is comprised of CSS rules  
+  - CSS files are comprised of CSS rules  
     css - Syntax.css
     ```
-    selector1, selector2 {
+    selector1, selector2 { // begin css rule
       property1: value;
       property2: value;
+    } // end css rule
+    ```
+  - Linking tags in your components to rules in css requires the tag's className attribute to match the selector in the css rule.  
+    javascript - App.js
+    ```
+    <tag className="ClassNameExample"></tag> 
+    ```
+    css - App.css
+    ```
+    .ClassNameExample {
+      font-size: 15px;
     }
     ```
-
 
 
 ## MVP complete
