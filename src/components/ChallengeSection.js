@@ -15,6 +15,7 @@ import logo from './comp-imgs/cw-icon-ss.png'
 const userName =  'AntCannon';
 const page = 0;
 const getCompletedChallengesURL = `https://www.codewars.com/api/v1/users/AntCannon/code-challenges/completed?page=0}`
+const getCodeChallengeURL = `https://www.codewars.com/api/v1/code-challenges/`
 
 // Challenge Card
 const ChallengeCard = (props) => {
@@ -23,7 +24,7 @@ const ChallengeCard = (props) => {
     <a className="Card-Link" href={props.link} target="_blank" rel="noreferrer"></a>
       <div className="Info">
         <h2>{props.name}</h2>
-        <h3>{props.date}</h3>
+        <h3>{props.rank} | {props.date}</h3>
       </div>
       <div className="Icon">
         <img src={logo} width={75}></img>
@@ -37,7 +38,17 @@ const ChallengeSection = () => {
   // create useStates
   const [challengeData, setChallengeData] = React.useState(null);
   const [error, setError] = React.useState(null);
-  
+
+  // Helper function - kata rank name
+  const [kataRankName, setKataRankName] = React.useState(null);
+  const [kataError, setKataError] = React.useState(null);
+
+  function getKataRankNameById(challenge) {
+    axios.get(getCodeChallengeURL+challenge.id)
+      .then(response => setKataRankName(response.rank.name))
+      .catch(error => setKataError(error))
+  }  
+ 
   // useEffect for API
   React.useEffect(() => {
     // Make API request to codewars
@@ -58,10 +69,12 @@ const ChallengeSection = () => {
   for (let i = 0; (currDate === new Date(challengeData[i].completedAt).getDate() && currMonth === new Date(challengeData[i].completedAt).getMonth()); i++) {
     challengesArr.push(<ChallengeCard
       name={challengeData[i].name}
+      rank={getKataRankNameById(challengeData[i])}
       date={dispDate(challengeData[i])}
       link={kataLink(challengeData[i])} />);
   }
 
+ 
   let numChallengesCompleted = challengesArr.length
 
   // Return
@@ -85,5 +98,7 @@ function dispDate(challenge) {
 function kataLink(challenge) {
 return `https://www.codewars.com/kata/${challenge.id}`
 }
+
+
 
 export default ChallengeSection;
