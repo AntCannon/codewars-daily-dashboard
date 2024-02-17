@@ -10,7 +10,7 @@ async function fetchUserData() {
   return userInfo
 }
 
-fetchUserData().then(userData => userInfo = (userData))
+// fetchUserData().then(userData => userInfo = (userData))
 console.log(`variable`,userInfo)
 
 // function resolveAfter2Seconds() {
