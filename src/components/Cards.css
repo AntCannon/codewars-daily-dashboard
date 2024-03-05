@@ -1,15 +1,27 @@
 .Card {
-  width: auto;
-  background: rgb(183, 183, 183);
-  margin: 10px;
-  padding-left: 30px ;
+  width: 378px;
+  min-height: 211px;
+  padding-left: 15px ;
   /* border: 3px solid black; */
   border-radius: 5px;
+  box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);
   display: flex;
+  /* grid-template-columns: 0% 80% 1fr; */
   align-items: center;
   position: relative;
-  box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);
+}
 
+.Card::before{
+  content: "";
+  position: absolute;
+  background-image: url(./comp-imgs/challenge-card-378x211-rd.png);
+  background-size: cover;
+  border-radius: 5px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 1;
 }
 
 .Card:hover {
@@ -17,18 +29,16 @@
 }
 
 .Card-Link {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
 }
 
 .Info {
-  width: 75%;
+  font-size: 1em;
+  position: relative;
+  color: #fff;
+  /* width: 90%; */
   text-align: left;
 }
 
 .Icon {
-  margin-left: 20px;
+  display: none;
 }

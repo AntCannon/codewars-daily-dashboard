@@ -1,0 +1,20 @@
+.ChallengeSection {
+}
+
+span {
+  font-weight: bold;
+}
+
+.ChallengeCards {
+}
+
+.Challenges {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  grid-auto-rows: minmax(211px, auto);
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+}

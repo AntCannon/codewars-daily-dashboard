@@ -34,6 +34,5 @@ const WelcomeSection = () => {
   )
 };
 
-
 // export
 export default WelcomeSection;
