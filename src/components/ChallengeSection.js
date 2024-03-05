@@ -21,7 +21,7 @@ const getCodeChallengeURL = `https://www.codewars.com/api/v1/code-challenges/`
 const ChallengeCard = (props) => {
   return(
     <div className="Card">
-    <a className="Card-Link" href={props.link} target="_blank" rel="noreferrer"></a>
+    <a className="Card-Link" href={props.link} target="_blank" rel="noreferrer">
       <div className="Info">
         <h2>{props.name}</h2>
         <h3>{props.rank}{props.date}</h3>
@@ -29,6 +29,7 @@ const ChallengeCard = (props) => {
       <div className="Icon">
         <img src={logo} width={75}></img>
       </div>
+    </a>
     </div>
   )
 }

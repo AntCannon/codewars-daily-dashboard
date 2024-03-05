@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/codewars-daily-dashboard/static/css/main.d7fa6115.css",
+    "main.js": "/codewars-daily-dashboard/static/js/main.b274756f.js",
+    "static/media/cw-icon-ss.png": "/codewars-daily-dashboard/static/media/cw-icon-ss.e0f1c0fce08965594591.png",
+    "static/media/challenge-card-378x211-rd.png": "/codewars-daily-dashboard/static/media/challenge-card-378x211-rd.4cdce129ac7853ab45f9.png",
+    "index.html": "/codewars-daily-dashboard/index.html",
+    "main.d7fa6115.css.map": "/codewars-daily-dashboard/static/css/main.d7fa6115.css.map",
+    "main.b274756f.js.map": "/codewars-daily-dashboard/static/js/main.b274756f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7fa6115.css",
+    "static/js/main.b274756f.js"
+  ]
+}
