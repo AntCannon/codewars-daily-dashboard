@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/codewars-daily-dashboard/static/css/main.751d55a5.css",
-    "main.js": "/codewars-daily-dashboard/static/js/main.0b1e3052.js",
-    "static/js/592.2baddea5.chunk.js": "/codewars-daily-dashboard/static/js/592.2baddea5.chunk.js",
+    "main.css": "/codewars-daily-dashboard/static/css/main.c1164800.css",
+    "main.js": "/codewars-daily-dashboard/static/js/main.0a6529ed.js",
     "static/media/cw-icon-ss.png": "/codewars-daily-dashboard/static/media/cw-icon-ss.e0f1c0fce08965594591.png",
+    "static/media/challenge-card-378x211-rd.png": "/codewars-daily-dashboard/static/media/challenge-card-378x211-rd.4cdce129ac7853ab45f9.png",
     "index.html": "/codewars-daily-dashboard/index.html",
-    "main.751d55a5.css.map": "/codewars-daily-dashboard/static/css/main.751d55a5.css.map",
-    "main.0b1e3052.js.map": "/codewars-daily-dashboard/static/js/main.0b1e3052.js.map",
-    "592.2baddea5.chunk.js.map": "/codewars-daily-dashboard/static/js/592.2baddea5.chunk.js.map"
+    "main.c1164800.css.map": "/codewars-daily-dashboard/static/css/main.c1164800.css.map",
+    "main.0a6529ed.js.map": "/codewars-daily-dashboard/static/js/main.0a6529ed.js.map"
   },
   "entrypoints": [
-    "static/css/main.751d55a5.css",
-    "static/js/main.0b1e3052.js"
+    "static/css/main.c1164800.css",
+    "static/js/main.0a6529ed.js"
   ]
 }
